@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono, Fraunces, Cinzel } from "next/font/google";
 import { siteConfig } from "../../site.config";
 import { personSchema, websiteSchema } from "@/lib/seo";
@@ -141,6 +142,8 @@ export default function RootLayout({
           <BottomNav />
         </Providers>
         <SpeedInsights />
+        {/* Footfall, our visit logger */}
+        <Script src="https://ff.anirudhgoel.xyz/f.js" strategy="afterInteractive" />
       </body>
     </html>
   );
